@@ -22,17 +22,16 @@ void Nguoi::xuat(){
     cout<<setw(20)<<left<<tuoi;
 }
 class Khoa {
-public:
     string maKhoa, tenKhoa, trk;
     friend class GiaoVien;
-    friend void khoatin(GiaoVien a);
-
+    friend void xuatds(GiaoVien* a, int n);
 };
+
 class GiaoVien : public Nguoi {
     unsigned luong, thamNien;
     Khoa kh;
-    friend void khoatin(GiaoVien a);
-    friend void khoatinds(GiaoVien* a, int n);
+    friend void xuatds(GiaoVien* a, int n);
+
 public:
     void nhap();
     void xuat();
